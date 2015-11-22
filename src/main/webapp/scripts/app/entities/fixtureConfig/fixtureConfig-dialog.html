@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myFixtureConfigLabel">Create or edit a FixtureConfig</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="fixtureConfig.id" readonly />
+        </div>
+        <div class="form-group">
+            <label for="field_sourceClass">SourceClass</label>
+            <input type="text" class="form-control" name="sourceClass" id="field_sourceClass"
+                    ng-model="fixtureConfig.sourceClass"
+                    required />
+            <div ng-show="editForm.sourceClass.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.sourceClass.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_sourceProcessorClass">SourceProcessorClass</label>
+            <input type="text" class="form-control" name="sourceProcessorClass" id="field_sourceProcessorClass"
+                    ng-model="fixtureConfig.sourceProcessorClass"
+                    required />
+            <div ng-show="editForm.sourceProcessorClass.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.sourceProcessorClass.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_active">Active</label>
+            <input type="checkbox" class="form-control" name="active" id="field_active"
+                    ng-model="fixtureConfig.active"
+                     />
+            <div ng-show="editForm.active.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.active.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,60 @@
+<div>
+    <h2>FixtureEvents</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="fixtureEvent.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span>Create a new FixtureEvent</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>EventId</th>
+                    <th>MatchId</th>
+                    <th>EventMinute</th>
+                    <th>EventTeam</th>
+                    <th>EventPlayer</th>
+                    <th>EventType</th>
+                    <th>EventResult</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="fixtureEvent in fixtureEvents track by fixtureEvent.id">
+                    <td><a ui-sref="fixtureEvent.detail({id:fixtureEvent.id})">{{fixtureEvent.id}}</a></td>
+                    <td>{{fixtureEvent.eventId}}</td>
+                    <td>{{fixtureEvent.matchId}}</td>
+                    <td>{{fixtureEvent.eventMinute}}</td>
+                    <td>{{fixtureEvent.eventTeam}}</td>
+                    <td>{{fixtureEvent.eventPlayer}}</td>
+                    <td translate="{{'fanClubSocialApp.FCSocialFixtureEventTypeEnum.' + fixtureEvent.eventType}}">{{fixtureEvent.eventType}}</td>
+                    <td>{{fixtureEvent.eventResult}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="fixtureEvent.detail({id:fixtureEvent.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="fixtureEvent.edit({id:fixtureEvent.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="fixtureEvent.delete({id:fixtureEvent.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

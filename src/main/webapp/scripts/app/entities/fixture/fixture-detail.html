@@ -1,0 +1,110 @@
+
+<div>
+    <h2><span>Fixture</span> {{fixture.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>MatchId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixture.matchId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TeamOneId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixture.teamOneId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TeamTwoId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixture.teamTwoId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TeamOne</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixture.teamOne}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TeamTwo</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixture.teamTwo}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TeamOneScore</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixture.teamOneScore}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TeamTwoScore</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixture.teamTwoScore}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>MatchTime</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixture.matchTime}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>HtScore</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixture.htScore}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>FtScore</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixture.ftScore}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>MatchDate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixture.matchDate | date:'medium'}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

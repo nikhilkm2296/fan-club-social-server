@@ -1,0 +1,132 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myFixtureLabel">Create or edit a Fixture</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="fixture.id" readonly />
+        </div>
+        <div class="form-group">
+            <label for="field_matchId">MatchId</label>
+            <input type="text" class="form-control" name="matchId" id="field_matchId"
+                    ng-model="fixture.matchId"
+                    required />
+            <div ng-show="editForm.matchId.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.matchId.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_teamOneId">TeamOneId</label>
+            <input type="text" class="form-control" name="teamOneId" id="field_teamOneId"
+                    ng-model="fixture.teamOneId"
+                    required />
+            <div ng-show="editForm.teamOneId.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.teamOneId.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_teamTwoId">TeamTwoId</label>
+            <input type="text" class="form-control" name="teamTwoId" id="field_teamTwoId"
+                    ng-model="fixture.teamTwoId"
+                    required />
+            <div ng-show="editForm.teamTwoId.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.teamTwoId.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_teamOne">TeamOne</label>
+            <input type="text" class="form-control" name="teamOne" id="field_teamOne"
+                    ng-model="fixture.teamOne"
+                    required />
+            <div ng-show="editForm.teamOne.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.teamOne.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_teamTwo">TeamTwo</label>
+            <input type="text" class="form-control" name="teamTwo" id="field_teamTwo"
+                    ng-model="fixture.teamTwo"
+                    required />
+            <div ng-show="editForm.teamTwo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.teamTwo.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_teamOneScore">TeamOneScore</label>
+            <input type="text" class="form-control" name="teamOneScore" id="field_teamOneScore"
+                    ng-model="fixture.teamOneScore"
+                     />
+        </div>
+        <div class="form-group">
+            <label for="field_teamTwoScore">TeamTwoScore</label>
+            <input type="text" class="form-control" name="teamTwoScore" id="field_teamTwoScore"
+                    ng-model="fixture.teamTwoScore"
+                     />
+        </div>
+        <div class="form-group">
+            <label for="field_matchTime">MatchTime</label>
+            <input type="text" class="form-control" name="matchTime" id="field_matchTime"
+                    ng-model="fixture.matchTime"
+                     />
+        </div>
+        <div class="form-group">
+            <label for="field_htScore">HtScore</label>
+            <input type="text" class="form-control" name="htScore" id="field_htScore"
+                    ng-model="fixture.htScore"
+                     />
+        </div>
+        <div class="form-group">
+            <label for="field_ftScore">FtScore</label>
+            <input type="text" class="form-control" name="ftScore" id="field_ftScore"
+                    ng-model="fixture.ftScore"
+                     />
+        </div>
+        <div class="form-group">
+            <label for="field_matchDate">MatchDate</label>
+            <input type="datetime-local" class="form-control" name="matchDate" id="field_matchDate"
+                    ng-model="fixture.matchDate"
+                    required />
+            <div ng-show="editForm.matchDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.matchDate.$error.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.matchDate.$error.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

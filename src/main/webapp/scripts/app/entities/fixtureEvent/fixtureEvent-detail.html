@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span>FixtureEvent</span> {{fixtureEvent.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>EventId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixtureEvent.eventId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>MatchId</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixtureEvent.matchId}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>EventMinute</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixtureEvent.eventMinute}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>EventTeam</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixtureEvent.eventTeam}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>EventPlayer</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixtureEvent.eventPlayer}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>EventType</span>
+                </td>
+                <td>
+                    <span class="form-control-static" translate="{{'fanClubSocialApp.FCSocialFixtureEventTypeEnum.' + fixtureEvent.eventType}}">{{fixtureEvent.eventType}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>EventResult</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixtureEvent.eventResult}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

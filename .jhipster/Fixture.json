@@ -1,0 +1,80 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "matchId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "teamOneId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "teamTwoId",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "teamOne",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "teamTwo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "teamOneScore",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "teamTwoScore",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 8,
+            "fieldName": "matchTime",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 9,
+            "fieldName": "htScore",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 10,
+            "fieldName": "ftScore",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 11,
+            "fieldName": "matchDate",
+            "fieldType": "LocalDateTime",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "dto": "mapstruct",
+    "pagination": "pager"
+}

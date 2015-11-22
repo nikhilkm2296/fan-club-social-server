@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span>FixtureConfig</span> {{fixtureConfig.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>SourceClass</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixtureConfig.sourceClass}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>SourceProcessorClass</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixtureConfig.sourceProcessorClass}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Active</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{fixtureConfig.active}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

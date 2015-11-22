@@ -1,0 +1,113 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myFixtureEventLabel">Create or edit a FixtureEvent</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="fixtureEvent.id" readonly />
+        </div>
+        <div class="form-group">
+            <label for="field_eventId">EventId</label>
+            <input type="text" class="form-control" name="eventId" id="field_eventId"
+                    ng-model="fixtureEvent.eventId"
+                    required />
+            <div ng-show="editForm.eventId.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.eventId.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_matchId">MatchId</label>
+            <input type="text" class="form-control" name="matchId" id="field_matchId"
+                    ng-model="fixtureEvent.matchId"
+                    required />
+            <div ng-show="editForm.matchId.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.matchId.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_eventMinute">EventMinute</label>
+            <input type="text" class="form-control" name="eventMinute" id="field_eventMinute"
+                    ng-model="fixtureEvent.eventMinute"
+                    required />
+            <div ng-show="editForm.eventMinute.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.eventMinute.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_eventTeam">EventTeam</label>
+            <input type="text" class="form-control" name="eventTeam" id="field_eventTeam"
+                    ng-model="fixtureEvent.eventTeam"
+                    required />
+            <div ng-show="editForm.eventTeam.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.eventTeam.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_eventPlayer">EventPlayer</label>
+            <input type="text" class="form-control" name="eventPlayer" id="field_eventPlayer"
+                    ng-model="fixtureEvent.eventPlayer"
+                    required />
+            <div ng-show="editForm.eventPlayer.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.eventPlayer.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_eventType">EventType</label>
+            <select class="form-control" name="eventType" ng-model="fixtureEvent.eventType" id="field_eventType" required>
+                <option value="yellowcard">yellowcard</option>
+                <option value="redcard">redcard</option>
+                <option value="goal">goal</option>
+                <option value="yellowred">yellowred</option>
+            </select>
+            <div ng-show="editForm.eventType.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.eventType.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="field_eventResult">EventResult</label>
+            <input type="text" class="form-control" name="eventResult" id="field_eventResult"
+                    ng-model="fixtureEvent.eventResult"
+                    required />
+            <div ng-show="editForm.eventResult.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.eventResult.$error.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>
